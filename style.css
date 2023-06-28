@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;  
+    background-color: rgb(9, 0, 15);
+    background-image: radial-gradient(circle closest-side, #2e6fd8, #000);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ball{
+    /* margin-top: 9vw; */
+    
+    width: 30vw;
+    height: 30vw;
+    background-image: url(ball.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);  
+    /* position: absolute;
+    top: 9vw;
+    left: 35vw; */
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    
+}
+.anim   {
+    animation: 1.2s ease-in-out shake;
+
+}
+@keyframes shake{
+    0%,100%{
+        transform: translateX(0);
+    }
+    10%,30%,50%,70%,90%{
+        transform:translateX(20%);
+    }
+    20%,40%,60%,80%{
+        transform: translateX(-20%);
+    }
+}
+.ball_hole{
+    width: 16.1vw;
+    height: 16.1vw;
+    background-image: url(ball-hole.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    opacity: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.ball_hole__text{
+    width: 100px;
+    height: 100px;
+    color:#c6dcff;
+    font-size: 24px;
+    line-height: 27px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    z-index: 2;
+    width: 35vw;
+    height: 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    bottom: 0;
+    left: 2vw;
+    position: absolute;
+}
+.text p{
+    font-size: 22px;
+    color: white;
+    width: 40%;
+
+}
+.text_question{
+    width: 50%;
+    height: 30%;
+    padding: 0.5vw;
+    font-size: 16px;
+    color: #000;
+    border-radius: 0.3vw;
+    border: none;
+}
+@media(max-width:992px){
+    .ball_hole{
+        font-size: 18px;
+        font-weight: 600;
+        width: 41.1vw;
+        height: 41.1vw;
+    }
+    .ball{
+        width: 65vw;
+        height: 65vw;
+    }
+    .text{
+        width: 94vw;height: 15vw;
+    }
+    .text p{
+        font-size: 20px;
+        width: 46%;
+    }
+    .text_question{
+        width: 50%;
+        height: 50%;
+        border-radius: 1.5vw;
+        font-size: 14px;
+    }
+}
